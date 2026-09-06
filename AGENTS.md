@@ -58,7 +58,7 @@ Principle:
 Use Bazantic to orchestrate the relevant sequence across services such as:
 - The Graph;
 - Merkl / claim adapters;
-- Blockaid;
+- Alchemy Simulation API;
 - claim preparation / verification.
 
 Bazantic should help turn fragmented integrations into a clear reusable workflow.
@@ -192,7 +192,7 @@ Keep the implementation constrained to the documented hackathon scope.
 - EVM only.
 - Use The Graph for wallet activity / context.
 - Use Merkl and a small number of deterministic claim adapters for real claimable rewards.
-- Use Blockaid for transaction simulation / security analysis.
+- Use Alchemy (Simulation API / Asset Changes) for transaction simulation and security analysis.
 - Use Bazantic for workflow orchestration where useful for the bounty.
 - Use Privy for wallet / transaction UX.
 - Use Ledger for human approval where applicable.

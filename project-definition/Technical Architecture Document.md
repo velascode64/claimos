@@ -24,8 +24,8 @@ Flujo mental:
 | **The Graph**         | Descubrir actividad onchain de la wallet | Subgraphs / standardized data                    |
 | **Merkl**             | Detectar rewards reales                  | Rewards API por address                          |
 | **Claim Adapters**    | Cubrir claims fuera de Merkl             | Integraciones propias por protocolo/distributor  |
-| **Blockaid**          | Seguridad                                | Transaction simulation + risk analysis           |
-| **Bazantic**          | Orquestación                             | Workflow entre Graph, Merkl, adapters y Blockaid |
+| **Alchemy**          | Simulación y Seguridad                   | Transaction simulation + asset changes (Alchemy Simulation API) |
+| **Bazantic**          | Orquestación                             | Workflow entre Graph, Merkl, adapters y Alchemy  |
 | **Privy**             | Wallet UX                                | Connect wallet + transaction/signing flow        |
 | **Ledger**            | Human-in-the-loop                        | Aprobación segura de la transacción final        |
 | **Supabase/Postgres** | Estado del producto                      | scans, claims, cache, resultados                 |
@@ -59,16 +59,16 @@ Flujo mental:
              └────────────┼────────────┘
                           │
                           ▼
-                    CLAIM ENGINE
-             normalize / deduplicate
-                  eligibility / price
-                          │
-                          ▼
-                      BLOCKAID
-                 simulation / risk
-                          │
-                          ▼
-                       PRIVY
+                     CLAIM ENGINE
+              normalize / deduplicate
+                   eligibility / price
+                           │
+                           ▼
+                        ALCHEMY
+                 simulation / assets
+                           │
+                           ▼
+                        PRIVY
                   wallet connection
                           │
                           ▼
@@ -124,7 +124,7 @@ Construye la transacción oficial.
 POST /api/claims/:id/verify
 ```
 
-Envía la transacción a Blockaid y devuelve simulation/risk.
+Envía la transacción a Alchemy Simulation API (`alchemy_simulateAssetChanges`) y devuelve balance diff, gas y verificación de seguridad.
 
 ```text
 POST /api/claims/:id/execute
@@ -155,7 +155,7 @@ Para no desviarnos:
 
 * **Solo EVM.**
 * No Solana.
-* No construir nuestro propio detector de scams: usar **Blockaid**.
+* No construir nuestro propio simulador o detector: usar **Alchemy Simulation API**.
 * No construir nuestra propia wallet: usar **Privy / wallets existentes**.
 * No intentar soportar todos los airdrops.
 * Empezar con **Merkl + pocos adapters reales**.
@@ -166,7 +166,7 @@ Para no desviarnos:
 * No construir portfolio management.
 * No hacer swaps/cash-out en V1 salvo que sobre tiempo.
 * No perseguir bounties que obliguen a deformar el producto.
-* La AI puede ayudar a investigar/orquestar, pero **la seguridad final depende de datos determinísticos + Blockaid + aprobación humana**.
+* La AI puede ayudar a investigar/orquestar, pero **la seguridad final depende de datos determinísticos + Alchemy Simulation + aprobación humana**.
 * Objetivo demo:
 
 ```text

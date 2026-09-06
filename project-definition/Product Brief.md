@@ -16,7 +16,7 @@
 * Las soluciones actuales están separadas:
 
   * **Galxe / Drops / Merkl** → discovery y eligibility.
-  * **Blockaid / wallet simulations** → seguridad.
+  * **Alchemy (Simulation API) / wallet simulations** → seguridad.
   * **Ledger / hardware wallets** → aprobación.
   * **Revoke / burner wallets** → limitar daño.
 * Estudios recientes muestran que incluso usuarios con experiencia **malinterpretan firmas y parámetros**, y que explicarlos semánticamente mejora la detección de riesgo.
@@ -138,7 +138,7 @@ Aquí reducimos la necesidad de ir a X, Discord o Etherscan a investigar manualm
 
 > **¿Qué va a pasar si firmo?**
 
-Blockaid analiza/simula la transacción.
+Alchemy (Simulation API / Asset Changes) analiza y simula la transacción.
 
 La UI lo traduce:
 
@@ -223,10 +223,10 @@ wallet activity
 MERKL + ADAPTERS
 claim discovery / eligibility
      ↓
- CLAIM ENGINE
+  CLAIM ENGINE
 normalize results
      ↓
-  BLOCKAID
+  ALCHEMY
 simulation / security
      ↓
   BAZANTIC
@@ -243,11 +243,11 @@ CLAIM CONTRACT
    Wallet
 ```
 
-### Qué aporta cada sponsor
+### Qué aporta cada sponsor / servicio
 
 * **The Graph:** *¿Qué hizo esta wallet?*
 * **Merkl/adapters:** *¿Tiene realmente algo para reclamar?*
-* **Blockaid:** *¿Qué ocurrirá si ejecutamos esto y hay señales de riesgo?*
+* **Alchemy:** *¿Qué ocurrirá si ejecutamos esto y qué activos se transferirán?*
 * **Bazantic:** conecta el workflow.
 * **Privy:** interacción fluida con la wallet.
 * **Ledger:** aprobación humana de la acción irreversible.
