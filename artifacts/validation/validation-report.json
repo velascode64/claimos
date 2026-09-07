@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-09-07T06:23:14.881Z",
+  "status": "PASS",
+  "completed": [
+    "environment.json",
+    "graph.json",
+    "merkl.json",
+    "merkl-normalized.json",
+    "compiled.json",
+    "sepolia-deployment.json",
+    "anvil-safe.json",
+    "anvil-unsafe.json",
+    "sepolia-execution.json"
+  ],
+  "blocked": [],
+  "phases": {
+    "graph": {
+      "subgraphs": [
+        {
+          "id": "FBVyahKnFFc1b6E7CpRHK59whHta3AkLCAgqfpReXAvK",
+          "block": 93371436
+        }
+      ],
+      "note": "Graph endpoint and indexed blocks verified."
+    },
+    "merkl": {
+      "wallet": "0x0b542f61199d2a01770b601efa0509244bdcee89",
+      "rewards": [
+        {
+          "address": "0x0b542f61199d2a01770b601efa0509244bdcee89",
+          "chainId": 10,
+          "token": "0x4200000000000000000000000000000000000042",
+          "amount": "5920882782085951725806",
+          "claimed": "0",
+          "claimable": "5920882782085951725806",
+          "proofs": [
+            "0xc4d0da9b7dfd7103e0392e7b01b6ce74104833436daba9bf7aee79986d2d79cb",
+            "0xac089793d08854fa2377212d6a6430b3c282153fb20cb6e1af729b556bb488ef",
+            "0x9c71a547f2c234a7ee1d716c2755fd5d0d1627972619657fd664fd2c9be8a220",
+            "0x5f5e76452e8d05b65f8e23482526a3d094e175ac7c8f7e3c5d2115f6ef911a7a",
+            "0x6fab07f7d25e3fc80d7c63ed73983ecdf764a3f9f2771da1b08a3cdf79df0ce4",
+            "0x3c8e2ef1adcf1d74e448ac419dde2d392c4071997fc29a62234038469c23e491",
+            "0x787ea7c83ce300ced32dd6e544d9cb775a8ff822c596fd2a92278a10ee8a81ba",
+            "0xb6242365ae416efd6e6521fc2e7f694a2c298202a5acb6ff1ac68e0ab8a3a519",
+            "0xc1a2802904dec3135ec37cebde543a8e5672080d9983e633b0c68413064de403",
+            "0x01ee2dec323f335f6c8ba9cb305604e8102125b813e4838028c6181ce49f72ba",
+            "0x11040bccf9985c9cecdab1151c96bb294db205167eab400737aac86cdb7b73e8",
+            "0x8ae1285f4985609f2d6535b82e09d4d7c0a88ccbd148b139fd56a0e5fed3b1d5",
+            "0x8711e0fd00e591fa7e25df1ac37efdddad53a52c11cdad2e9b0cb889c1bbe326",
+            "0x973979dfaa7cd5951c100d7a1f973db33e7309c69dd832b0dd553f9fd2e51071",
+            "0xfa6ddbde322074d7de9999a952ace9a1ae9ccaeaf4fc5b4a37658beecbf010f6",
+            "0x12a595866d9ef2399deb846632ab42f17470a79deb56e3436359ed46e1836072",
+            "0x0055c991475d76afab1a5a8079c6eccfcfe33d69194c8672cbb38d8f79fe176b",
+            "0xd137105951daa6bc44e99708a423424b8770e1a33bc05ab9f7a0930cba0fc892"
+          ],
+          "discoveredAt": "2026-09-07T06:25:23.350Z"
+        }
+      ],
+      "fixture": {
+        "address": "0x0b542f61199d2a01770b601efa0509244bdcee89",
+        "chainId": 10,
+        "token": "0x4200000000000000000000000000000000000042",
+        "amount": "5920882782085951725806",
+        "claimed": "0",
+        "claimable": "5920882782085951725806",
+        "proofs": [
+          "0xc4d0da9b7dfd7103e0392e7b01b6ce74104833436daba9bf7aee79986d2d79cb",
+          "0xac089793d08854fa2377212d6a6430b3c282153fb20cb6e1af729b556bb488ef",
+          "0x9c71a547f2c234a7ee1d716c2755fd5d0d1627972619657fd664fd2c9be8a220",
+          "0x5f5e76452e8d05b65f8e23482526a3d094e175ac7c8f7e3c5d2115f6ef911a7a",
+          "0x6fab07f7d25e3fc80d7c63ed73983ecdf764a3f9f2771da1b08a3cdf79df0ce4",
+          "0x3c8e2ef1adcf1d74e448ac419dde2d392c4071997fc29a62234038469c23e491",
+          "0x787ea7c83ce300ced32dd6e544d9cb775a8ff822c596fd2a92278a10ee8a81ba",
+          "0xb6242365ae416efd6e6521fc2e7f694a2c298202a5acb6ff1ac68e0ab8a3a519",
+          "0xc1a2802904dec3135ec37cebde543a8e5672080d9983e633b0c68413064de403",
+          "0x01ee2dec323f335f6c8ba9cb305604e8102125b813e4838028c6181ce49f72ba",
+          "0x11040bccf9985c9cecdab1151c96bb294db205167eab400737aac86cdb7b73e8",
+          "0x8ae1285f4985609f2d6535b82e09d4d7c0a88ccbd148b139fd56a0e5fed3b1d5",
+          "0x8711e0fd00e591fa7e25df1ac37efdddad53a52c11cdad2e9b0cb889c1bbe326",
+          "0x973979dfaa7cd5951c100d7a1f973db33e7309c69dd832b0dd553f9fd2e51071",
+          "0xfa6ddbde322074d7de9999a952ace9a1ae9ccaeaf4fc5b4a37658beecbf010f6",
+          "0x12a595866d9ef2399deb846632ab42f17470a79deb56e3436359ed46e1836072",
+          "0x0055c991475d76afab1a5a8079c6eccfcfe33d69194c8672cbb38d8f79fe176b",
+          "0xd137105951daa6bc44e99708a423424b8770e1a33bc05ab9f7a0930cba0fc892"
+        ],
+        "discoveredAt": "2026-09-07T06:25:23.350Z"
+      }
+    },
+    "security": {
+      "safe": {
+        "scenario": "LEGIT_CLAIM",
+        "decision": "SAFE",
+        "status": "SAFE",
+        "rewardDelta": "100000000",
+        "victimOutflow": "0",
+        "explanation": "La wallet recibe la recompensa; no salen activos víctima."
+      },
+      "unsafe": {
+        "scenario": "WALLET_DRAIN",
+        "decision": "HIGH_RISK",
+        "status": "HIGH_RISK",
+        "rewardDelta": "1000000",
+        "victimOutflow": "1000000000",
+        "approval": "MAX_UINT256",
+        "explanation": "La recompensa es un señuelo: también salen tokens de la wallet víctima."
+      }
+    }
+  }
+}
