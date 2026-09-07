@@ -59,6 +59,9 @@ export type ScanResult = {
   confirmedUsdValue: number
 }
 
+export type Campaign = { id: string; protocol: string; chainId: number; source: string; sourceUrl?: string; startsAt?: string; endsAt?: string; status: "active" | "upcoming" | "ended" }
+export type CampaignRequirement = { type: string; protocol: string; chainId: number; asset?: string; minimumAmount?: string; campaignId: string }
+
 export type SecurityCheck = {
   claimId: string
   provider: "alchemy" | "demo"
@@ -76,4 +79,3 @@ export type FlowEvent = {
   message: string
   data?: unknown
 }
-

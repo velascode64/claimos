@@ -11,6 +11,9 @@
     "typecheck:backend": "tsc --noEmit -p tsconfig.backend.json",
     "flow:demo": "bun run backend/cli/flow.ts",
     "flow:live": "bun run backend/cli/flow.ts --live",
+    "campaigns": "bun run backend/cli/campaigns.ts",
+    "campaigns:search": "bun run backend/cli/campaigns.ts search",
+    "agent:recipe": "bun run backend/cli/agent.ts recipe",
     "validate:e2e": "bun run scripts/validation/validate-e2e.ts"
   },
   "dependencies": {
@@ -47,6 +50,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.1.1",
+    "commander": "^8.3.0",
     "date-fns": "4.1.0",
     "embla-carousel-react": "8.6.0",
     "input-otp": "1.4.2",
