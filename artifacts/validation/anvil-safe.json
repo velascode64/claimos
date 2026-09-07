@@ -1,0 +1,8 @@
+{
+  "scenario": "LEGIT_CLAIM",
+  "decision": "SAFE",
+  "status": "SAFE",
+  "rewardDelta": "100000000",
+  "victimOutflow": "0",
+  "explanation": "La wallet recibe la recompensa; no salen activos víctima."
+}
