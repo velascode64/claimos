@@ -243,19 +243,47 @@ CLAIM CONTRACT
    Wallet
 ```
 
-### Qué aporta cada sponsor / servicio
+6. ETHGlobal Tracks & Bounties
 
-* **The Graph:** *¿Qué hizo esta wallet?*
-* **Merkl/adapters:** *¿Tiene realmente algo para reclamar?*
-* **Alchemy:** *¿Qué ocurrirá si ejecutamos esto y qué activos se transferirán?*
-* **Bazantic:** conecta el workflow.
-* **Privy:** interacción fluida con la wallet.
-* **Ledger:** aprobación humana de la acción irreversible.
+ClaimOS está diseñado para competir principalmente en estos bounties:
 
-## MVP de hackathon
+Prioridad	Sponsor / Bounty	Cómo ClaimOS lo utiliza
+1	The Graph — Best Use of Composable / Standardized Graph Products	The Graph forma parte del discovery real: actividad de la wallet, contexto onchain y datos que alimentan el Claim Engine. Debemos mostrar claramente en el demo que los resultados de The Graph afectan el resultado de ClaimOS.
+2	Privy — Financial Flow	Privy participa en el flujo financiero real: ClaimOS escanea primero sin conexión, verifica el claim y solo después conecta la wallet con Privy para revisar y ejecutar la transacción.
+3	Bazantic — Sponsor APIs / Recipe	Bazantic funciona como orquestador del agente: conecta wallet context, eligibility, transaction preparation y security analysis usando las herramientas reales de ClaimOS y APIs de otros sponsors.
+4	Ledger — AI Agents × Ledger	Ledger añade human-in-the-loop para la acción irreversible: ClaimOS analiza y prepara la transacción, pero el usuario conserva la aprobación o rechazo final.
+Prioridad de implementación
 
-No intentaría cubrir todos los airdrops. El MVP necesita demostrar solamente:
+Para el MVP:
 
-**1 wallet → varias fuentes → 3 claims reales → explicación → security check → 1 claim ejecutado.**
+The Graph
+   ↓
+Privy
+   ↓
+Bazantic
+   ↓
+Ledger
 
-Eso prueba la propuesta de valor completa sin intentar construir toda la infraestructura de rewards de Ethereum en diez días.
+The Graph, Privy y Bazantic son las integraciones principales.
+
+Ledger es secundaria para la primera versión del demo.
+
+Regla para implementación
+
+Podemos utilizar librerías externas, SDKs y open source para acelerar el desarrollo.
+
+Pero no deben reemplazar la parte que necesitamos demostrar para un bounty.
+
+Ejemplos:
+
+GraphQL library → OK
+si los datos realmente vienen de The Graph
+y afectan el resultado de ClaimOS.
+Wallet library → OK
+si Privy sigue siendo parte real
+del flujo de conexión / ejecución.
+Workflow helpers → OK
+si Bazantic sigue orquestando
+las herramientas reales de ClaimOS.
+
+La demo debe hacer visible qué tecnología está participando en cada etapa, no simplemente incluirla como dependencia.
