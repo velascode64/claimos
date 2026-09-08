@@ -1,0 +1,9 @@
+{
+  "safe": {
+    "rewardDelta": "100000000"
+  },
+  "unsafe": {
+    "rewardDelta": "1000000",
+    "victimOutflow": "1000000000"
+  }
+}

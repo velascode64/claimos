@@ -1,0 +1,20 @@
+{
+  "required": [
+    {
+      "name": "ALCHEMY_SEPOLIA_RPC_URL",
+      "configured": true
+    },
+    {
+      "name": "SEPOLIA_BURNER_PRIVATE_KEY",
+      "configured": true
+    },
+    {
+      "name": "THE_GRAPH_API_KEY",
+      "configured": true
+    },
+    {
+      "name": "THE_GRAPH_SUBGRAPH_IDS",
+      "configured": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "scenario": "WALLET_DRAIN",
+  "decision": "HIGH_RISK",
+  "status": "HIGH_RISK",
+  "rewardDelta": "1000000",
+  "victimOutflow": "1000000000",
+  "approval": "MAX_UINT256",
+  "explanation": "La recompensa es un señuelo: también salen tokens de la wallet víctima."
+}
