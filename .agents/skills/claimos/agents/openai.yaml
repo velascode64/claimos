@@ -1,0 +1,4 @@
+interface:
+  display_name: ClaimOS
+  short_description: Discover, verify and safely prepare EVM rewards
+  default_prompt: Use $claimos to investigate ClaimOS campaigns and rewards, verify eligibility and security, and stop before human approval.

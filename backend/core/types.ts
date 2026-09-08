@@ -59,8 +59,9 @@ export type ScanResult = {
   confirmedUsdValue: number
 }
 
-export type Campaign = { id: string; protocol: string; chainId: number; source: string; sourceUrl?: string; startsAt?: string; endsAt?: string; status: "active" | "upcoming" | "ended" }
+export type Campaign = { id: string; protocol: string; chainId: number; source: string; sourceUrl?: string; startsAt?: string; endsAt?: string; status: "active" | "upcoming" | "ended"; credentialTypes?: string[]; interactionMode?: "READ_ONLY" | "MANUAL" | "ON_CHAIN" }
 export type CampaignRequirement = { type: string; protocol: string; chainId: number; asset?: string; minimumAmount?: string; campaignId: string }
+export type EligibilityResult = { wallet: `0x${string}`; campaignId: string; status: "ELIGIBLE" | "ALMOST_ELIGIBLE" | "NOT_ELIGIBLE" | "UNKNOWN"; completed: string[]; missing: string[]; evidence: string[] }
 
 export type SecurityCheck = {
   claimId: string

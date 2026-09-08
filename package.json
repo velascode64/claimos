@@ -1,7 +1,10 @@
 {
-  "name": "my-project",
+  "name": "claimos",
   "version": "0.1.0",
   "private": true,
+  "bin": {
+    "claimos": "./bin/claimos.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,6 +16,7 @@
     "flow:live": "bun run backend/cli/flow.ts --live",
     "campaigns": "bun run backend/cli/campaigns.ts",
     "campaigns:search": "bun run backend/cli/campaigns.ts search",
+    "merkl:test-airdrop": "bun run scripts/merkl/test-airdrop.ts",
     "agent:recipe": "bun run backend/cli/agent.ts recipe",
     "validate:e2e": "bun run scripts/validation/validate-e2e.ts"
   },
